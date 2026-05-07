@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables consumed by Tailwind's `bg-background` and `text-foreground` */
+@layer base {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+  }
+}
+
+/* Reusable component classes built from Tailwind utilities */
+@layer components {
+  .btn-icon {
+    @apply rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-brand-400;
+  }
+
+  .glass-panel {
+    @apply rounded-full bg-white/10 backdrop-blur-sm;
+  }
+}
